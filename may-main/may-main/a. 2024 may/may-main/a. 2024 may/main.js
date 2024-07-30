@@ -36,4 +36,23 @@ var perguntas= [
     ]
    }
 
-]
+];
+ 
+mostraPergunta();
+
+function mostraPergunta(){
+   perguntaAtual = pergunta [posiçãoAtual];
+   cxPerguntas.textContent = perguntaAtual.enunciado;
+   mostraAlternativas();
+}
+function mostraAlternativas(){
+   for (var alternativas of perguntaAtual.alternativas){
+
+      var botaoAlternativas= document.createElement ("button");
+      botaoAlternativas.textContent= alternativa;
+      cxAlternativas.appendChild(botaoAlternativas);
+   }
+}
+
+
+
